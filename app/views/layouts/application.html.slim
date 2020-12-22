@@ -8,7 +8,7 @@ html lang="en"
     meta content="app, responsive, jquery, bootstrap, dashboard, admin" name="keywords" /
     title Angle - Bootstrap Admin Template
     /! =============== VIEW STYLES ===============
-    = stylesheet_link_tag params[:controller]
+    /= stylesheet_link_tag params[:controller]
     /! =============== APP STYLES ===============
     = stylesheet_link_tag 'application', media: 'all', id: "maincss"
     = yield :vendor_css_area

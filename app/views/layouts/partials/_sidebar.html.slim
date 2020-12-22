@@ -1,0 +1,28 @@
+/! START Sidebar (left)
+.aside-inner
+  nav.sidebar data-sidebar-anyclick-close=""
+    /! START sidebar nav
+    ul.sidebar-nav
+      /! START user info
+      li.has-user-block
+        #user-block.collapse
+          .item.user-block
+            /! User picture
+            .user-block-picture
+              .user-block-status
+                img.img-thumbnail.rounded-circle alt="Avatar" height="60" src="#{image_path('angle/user/02.jpg')}" width="60" /
+                .circle.circle-success.circle-lg
+            /! Name and Job
+            .user-block-info
+              span.user-block-name Hello, Mike
+              span.user-block-role Designer
+      /! END user info
+      /! Iterates over all sidebar items
+      li.nav-heading
+        span Main Navigation
+        li class="#{'active' if controller_name == 'singleview' && action_name == 'index'}"
+          a href="/singleview" title=("Single View")
+            em.icon-speedometer
+            span Single View
+    /! END sidebar nav
+/! END Sidebar (left)

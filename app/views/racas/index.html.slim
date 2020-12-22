@@ -1,0 +1,21 @@
+h1 Listing racas
+
+table
+  thead
+    tr
+      th Nome
+      th
+      th
+      th
+
+  tbody
+    - @racas.each do |raca|
+      tr
+        td = raca.nome
+        td = link_to 'Show', raca
+        td = link_to 'Edit', edit_raca_path(raca)
+        td = link_to 'Destroy', raca, data: { confirm: 'Are you sure?' }, method: :delete
+
+br
+
+= link_to 'New Raca', new_raca_path

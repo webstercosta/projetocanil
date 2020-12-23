@@ -14,9 +14,14 @@
                 .circle.circle-success.circle-lg
             /! Name and Job
             .user-block-info
-              span.user-block-name Hello, Mike
-              span.user-block-role Designer
-      /! END user info
+              -if usuario_signed_in?
+                span.user-block-name
+                  = current_usuario.nome
+                = link_to "Sair", '/usuarios/sign_out', :method => :delete
+              - else
+                = link_to "Logar", usuario_session_path
+
+
       /! Iterates over all sidebar items
       li.nav-heading
         span Main Navigation

@@ -1,0 +1,37 @@
+h1 Listing filhotes
+
+table
+  thead
+    tr
+      th Nome
+      th Data nascimento
+      th Preco
+      th Disponivel
+      th Raca
+      th Caracteristica
+      th Matriz
+      th Padreador
+      th Ninhada
+      th
+      th
+      th
+
+  tbody
+    - @filhotes.each do |filhote|
+      tr
+        td = filhote.nome
+        td = filhote.data_nascimento
+        td = filhote.preco
+        td = filhote.disponivel
+        td = filhote.raca_id
+        td = filhote.caracteristica_id
+        td = filhote.matriz_id
+        td = filhote.padreador_id
+        td = filhote.ninhada_id
+        td = link_to 'Show', filhote
+        td = link_to 'Edit', edit_filhote_path(filhote)
+        td = link_to 'Destroy', filhote, data: { confirm: 'Are you sure?' }, method: :delete
+
+br
+
+= link_to 'New Filhote', new_filhote_path

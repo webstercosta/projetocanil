@@ -1,0 +1,2 @@
+class Caracteristica < ApplicationRecord
+end

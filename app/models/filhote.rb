@@ -1,0 +1,2 @@
+class Filhote < ApplicationRecord
+end

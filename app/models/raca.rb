@@ -1,0 +1,2 @@
+class Raca < ApplicationRecord
+end

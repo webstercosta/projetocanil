@@ -1,0 +1,21 @@
+p#notice = notice
+
+p
+  strong Nome:
+  = @matriz.nome
+p
+  strong Data nascimento:
+  = @matriz.data_nascimento
+p
+  strong Falecido:
+  = @matriz.falecido
+p
+  strong Raca:
+  = @matriz.raca_id
+p
+  strong Caracteristica:
+  = @matriz.caracteristica_id
+
+=> link_to 'Edit', edit_matriz_path(@matriz)
+'|
+=< link_to 'Back', matrizes_path

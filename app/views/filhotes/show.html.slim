@@ -1,0 +1,33 @@
+p#notice = notice
+
+p
+  strong Nome:
+  = @filhote.nome
+p
+  strong Data nascimento:
+  = @filhote.data_nascimento
+p
+  strong Preco:
+  = @filhote.preco
+p
+  strong Disponivel:
+  = @filhote.disponivel
+p
+  strong Raca:
+  = @filhote.raca_id
+p
+  strong Caracteristica:
+  = @filhote.caracteristica_id
+p
+  strong Matriz:
+  = @filhote.matriz_id
+p
+  strong Padreador:
+  = @filhote.padreador_id
+p
+  strong Ninhada:
+  = @filhote.ninhada_id
+
+=> link_to 'Edit', edit_filhote_path(@filhote)
+'|
+=< link_to 'Back', filhotes_path

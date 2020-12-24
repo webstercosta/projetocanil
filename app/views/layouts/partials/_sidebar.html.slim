@@ -5,24 +5,58 @@
     ul.sidebar-nav
       /! START user info
       li.has-user-block
-        #user-block.collapse
-          .item.user-block
-            /! User picture
-            .user-block-picture
-              .user-block-status
-                img.img-thumbnail.rounded-circle alt="Avatar" height="60" src="#{image_path('angle/user/02.jpg')}" width="60" /
-                .circle.circle-success.circle-lg
-            /! Name and Job
-            .user-block-info
-              span.user-block-name Hello, Mike
-              span.user-block-role Designer
-      /! END user info
-      /! Iterates over all sidebar items
+        -if usuario_signed_in?
+          #user-block.collapse
+            .item.user-block
+              /! User picture
+              .user-block-picture
+                .user-block-status
+                  img.img-thumbnail.rounded-circle alt="Avatar" height="60" src="#{image_path('angle/user/02.jpg')}" width="60" /
+                  .circle.bg-success.circle-lg
+              /! Name and Job
+              .user-block-info
+                span.user-block-name
+                  = current_usuario.nome
+                = link_to "Sair", '/usuarios/sign_out', :method => :delete
+        - else
+          = link_to "Logar", usuario_session_path
       li.nav-heading
-        span Main Navigation
-        li class="#{'active' if controller_name == 'singleview' && action_name == 'index'}"
-          a href="/singleview" title=("Single View")
-            em.icon-speedometer
-            span Single View
-    /! END sidebar nav
-/! END Sidebar (left)
+        span Menu de Navegação
+      /! Iterates over all sidebar items
+      li
+        a data-toggle="collapse" href="#submenu" title="Menu"
+          em.icon-note
+          span data-localize="sidebar.nav.menu.MENU"  Cadastros
+        ul#submenu.sidebar-nav.sidebar-subnav.collapse
+          li title="submenu"
+            span data-localize="sidebar.nav.menu.SUBMENU"
+            = link_to "Raça", racas_path
+          li title="submenu"
+            span data-localize="sidebar.nav.menu.SUBMENU"
+            = link_to "Caracteristicas", caracteristicas_path
+          li title="submenu"
+            span data-localize="sidebar.nav.menu.SUBMENU"
+            = link_to "Matrizes", matrizes_path
+          li title="submenu"
+            span data-localize="sidebar.nav.menu.SUBMENU"
+            = link_to "Padreadores", padreadores_path
+          li title="submenu"
+            span data-localize="sidebar.nav.menu.SUBMENU"
+            = link_to "Ninhada", ninhadas_path
+          li title="submenu"
+            span data-localize="sidebar.nav.menu.SUBMENU"
+            = link_to "Filhote", filhotes_path
+
+        li
+          a data-toggle="collapse" href="#submenu3" title="Menu3"
+            em.icon-layers
+            span data-localize="sidebar.nav.menu.MENU"  Vendas
+          ul#submenu3.sidebar-nav.sidebar-subnav.collapse
+            li.sidebar-subnav-header Filhotes
+            li
+              a href="" title="Submenu"
+                span data-localize="sidebar.nav.menu.submenu"  Filhotes
+            li.sidebar-subnav-header ###
+            li
+              a href="" title="Submenu"
+                span data-localize="sidebar.nav.menu.submenu"  ###

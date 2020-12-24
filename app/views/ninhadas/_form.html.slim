@@ -1,0 +1,33 @@
+= form_for @ninhada do |f|
+  - if @ninhada.errors.any?
+    #error_explanation
+      h2 = "#{pluralize(@ninhada.errors.count, "error")} prohibited this ninhada from being saved:"
+      ul
+        - @ninhada.errors.full_messages.each do |message|
+          li = message
+
+  .field
+    = f.label :nome
+    = f.text_field :nome
+  .field
+    = f.label :quantidade_vivo
+    = f.number_field :quantidade_vivo
+  .field
+    = f.label :quantidade_falecido
+    = f.number_field :quantidade_falecido
+  .field
+    = f.label :parto
+    = f.number_field :parto
+  .field
+    = f.label :situacao
+    = f.number_field :situacao
+  .field
+    = f.label :observacao
+    = f.text_field :observacao
+  .field
+    = f.label :matriz_id
+    = f.text_field :matriz_id
+  .field
+    = f.label :padreador_id
+    = f.text_field :padreador_id
+  .actions = f.submit

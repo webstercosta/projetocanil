@@ -1,0 +1,21 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nome: MyString
+  quantidade_vivo: 1
+  quantidade_falecido: 1
+  parto: 1
+  situacao: 1
+  observacao: MyString
+  matriz_id: 
+  padreador_id: 
+
+two:
+  nome: MyString
+  quantidade_vivo: 1
+  quantidade_falecido: 1
+  parto: 1
+  situacao: 1
+  observacao: MyString
+  matriz_id: 
+  padreador_id: 

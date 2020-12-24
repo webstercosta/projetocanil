@@ -1,0 +1,23 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nome: MyString
+  data_nascimento: 2020-12-24
+  preco: 9.99
+  disponivel: false
+  raca_id: 
+  caracteristica_id: 
+  matriz_id: 
+  padreador_id: 
+  ninhada_id: 
+
+two:
+  nome: MyString
+  data_nascimento: 2020-12-24
+  preco: 9.99
+  disponivel: false
+  raca_id: 
+  caracteristica_id: 
+  matriz_id: 
+  padreador_id: 
+  ninhada_id: 

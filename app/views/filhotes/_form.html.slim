@@ -1,0 +1,36 @@
+= form_for @filhote do |f|
+  - if @filhote.errors.any?
+    #error_explanation
+      h2 = "#{pluralize(@filhote.errors.count, "error")} prohibited this filhote from being saved:"
+      ul
+        - @filhote.errors.full_messages.each do |message|
+          li = message
+
+  .field
+    = f.label :nome
+    = f.text_field :nome
+  .field
+    = f.label :data_nascimento
+    = f.date_select :data_nascimento
+  .field
+    = f.label :preco
+    = f.text_field :preco
+  .field
+    = f.label :disponivel
+    = f.check_box :disponivel
+  .field
+    = f.label :raca_id
+    = f.text_field :raca_id
+  .field
+    = f.label :caracteristica_id
+    = f.text_field :caracteristica_id
+  .field
+    = f.label :matriz_id
+    = f.text_field :matriz_id
+  .field
+    = f.label :padreador_id
+    = f.text_field :padreador_id
+  .field
+    = f.label :ninhada_id
+    = f.text_field :ninhada_id
+  .actions = f.submit

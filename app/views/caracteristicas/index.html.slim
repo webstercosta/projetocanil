@@ -1,0 +1,21 @@
+h1 Listing caracteristicas
+
+table
+  thead
+    tr
+      th Nome
+      th
+      th
+      th
+
+  tbody
+    - @caracteristicas.each do |caracteristica|
+      tr
+        td = caracteristica.nome
+        td = link_to 'Show', caracteristica
+        td = link_to 'Edit', edit_caracteristica_path(caracteristica)
+        td = link_to 'Destroy', caracteristica, data: { confirm: 'Are you sure?' }, method: :delete
+
+br
+
+= link_to 'New Caracteristica', new_caracteristica_path

@@ -1,0 +1,35 @@
+h1 Listing ninhadas
+
+table
+  thead
+    tr
+      th Nome
+      th Quantidade vivo
+      th Quantidade falecido
+      th Parto
+      th Situacao
+      th Observacao
+      th Matriz
+      th Padreador
+      th
+      th
+      th
+
+  tbody
+    - @ninhadas.each do |ninhada|
+      tr
+        td = ninhada.nome
+        td = ninhada.quantidade_vivo
+        td = ninhada.quantidade_falecido
+        td = ninhada.parto
+        td = ninhada.situacao
+        td = ninhada.observacao
+        td = ninhada.matriz_id
+        td = ninhada.padreador_id
+        td = link_to 'Show', ninhada
+        td = link_to 'Edit', edit_ninhada_path(ninhada)
+        td = link_to 'Destroy', ninhada, data: { confirm: 'Are you sure?' }, method: :delete
+
+br
+
+= link_to 'New Ninhada', new_ninhada_path

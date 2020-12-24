@@ -1,0 +1,24 @@
+= form_for @matriz do |f|
+  - if @matriz.errors.any?
+    #error_explanation
+      h2 = "#{pluralize(@matriz.errors.count, "error")} prohibited this matriz from being saved:"
+      ul
+        - @matriz.errors.full_messages.each do |message|
+          li = message
+
+  .field
+    = f.label :nome
+    = f.text_field :nome
+  .field
+    = f.label :data_nascimento
+    = f.date_select :data_nascimento
+  .field
+    = f.label :falecido
+    = f.check_box :falecido
+  .field
+    = f.label :raca_id
+    = f.text_field :raca_id
+  .field
+    = f.label :caracteristica_id
+    = f.text_field :caracteristica_id
+  .actions = f.submit

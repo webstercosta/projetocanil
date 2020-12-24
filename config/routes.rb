@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  resources :filhotes
+  resources :ninhadas
+  resources :padreadores
+  resources :matrizes
+  resources :caracteristicas
   resources :racas
 
   devise_for :usuarios do

@@ -1,0 +1,21 @@
+p#notice = notice
+
+p
+  strong Nome:
+  = @padreador.nome
+p
+  strong Data nascimento:
+  = @padreador.data_nascimento
+p
+  strong Falecido:
+  = @padreador.falecido
+p
+  strong Raca:
+  = @padreador.raca_id
+p
+  strong Caracteristica:
+  = @padreador.caracteristica_id
+
+=> link_to 'Edit', edit_padreador_path(@padreador)
+'|
+=< link_to 'Back', padreadores_path

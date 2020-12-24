@@ -1,0 +1,29 @@
+h1 Listing padreadores
+
+table
+  thead
+    tr
+      th Nome
+      th Data nascimento
+      th Falecido
+      th Raca
+      th Caracteristica
+      th
+      th
+      th
+
+  tbody
+    - @padreadores.each do |padreador|
+      tr
+        td = padreador.nome
+        td = padreador.data_nascimento
+        td = padreador.falecido
+        td = padreador.raca_id
+        td = padreador.caracteristica_id
+        td = link_to 'Show', padreador
+        td = link_to 'Edit', edit_padreador_path(padreador)
+        td = link_to 'Destroy', padreador, data: { confirm: 'Are you sure?' }, method: :delete
+
+br
+
+= link_to 'New Padreador', new_padreador_path

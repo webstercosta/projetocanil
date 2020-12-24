@@ -1,0 +1,30 @@
+p#notice = notice
+
+p
+  strong Nome:
+  = @ninhada.nome
+p
+  strong Quantidade vivo:
+  = @ninhada.quantidade_vivo
+p
+  strong Quantidade falecido:
+  = @ninhada.quantidade_falecido
+p
+  strong Parto:
+  = @ninhada.parto
+p
+  strong Situacao:
+  = @ninhada.situacao
+p
+  strong Observacao:
+  = @ninhada.observacao
+p
+  strong Matriz:
+  = @ninhada.matriz_id
+p
+  strong Padreador:
+  = @ninhada.padreador_id
+
+=> link_to 'Edit', edit_ninhada_path(@ninhada)
+'|
+=< link_to 'Back', ninhadas_path

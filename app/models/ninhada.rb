@@ -1,0 +1,2 @@
+class Ninhada < ApplicationRecord
+end

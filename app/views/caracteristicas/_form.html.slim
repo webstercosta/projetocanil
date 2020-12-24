@@ -1,0 +1,12 @@
+= form_for @caracteristica do |f|
+  - if @caracteristica.errors.any?
+    #error_explanation
+      h2 = "#{pluralize(@caracteristica.errors.count, "error")} prohibited this caracteristica from being saved:"
+      ul
+        - @caracteristica.errors.full_messages.each do |message|
+          li = message
+
+  .field
+    = f.label :nome
+    = f.text_field :nome
+  .actions = f.submit

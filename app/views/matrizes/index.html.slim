@@ -1,0 +1,29 @@
+h1 Listing matrizes
+
+table
+  thead
+    tr
+      th Nome
+      th Data nascimento
+      th Falecido
+      th Raca
+      th Caracteristica
+      th
+      th
+      th
+
+  tbody
+    - @matrizes.each do |matriz|
+      tr
+        td = matriz.nome
+        td = matriz.data_nascimento
+        td = matriz.falecido
+        td = matriz.raca_id
+        td = matriz.caracteristica_id
+        td = link_to 'Show', matriz
+        td = link_to 'Edit', edit_matriz_path(matriz)
+        td = link_to 'Destroy', matriz, data: { confirm: 'Are you sure?' }, method: :delete
+
+br
+
+= link_to 'New Matriz', new_matriz_path

@@ -1,0 +1,2 @@
+class Padreador < ApplicationRecord
+end

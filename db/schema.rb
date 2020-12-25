@@ -52,6 +52,8 @@ ActiveRecord::Schema.define(version: 2020_12_24_134220) do
     t.integer "quantidade_falecido"
     t.integer "parto"
     t.integer "situacao"
+    t.date "data_cruzamento"
+    t.date "previsao_nascimento"
     t.string "observacao"
     t.bigint "matriz_id"
     t.bigint "padreador_id"

@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(version: 2020_12_24_134220) do
     t.date "data_nascimento"
     t.decimal "preco"
     t.boolean "disponivel"
+    t.string "sexo"
     t.bigint "raca_id"
     t.bigint "caracteristica_id"
     t.bigint "matriz_id"

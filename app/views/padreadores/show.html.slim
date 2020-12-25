@@ -11,10 +11,10 @@ p
   = @padreador.falecido
 p
   strong Raca:
-  = @padreador.raca_id
+  = @padreador.raca.nome
 p
   strong Caracteristica:
-  = @padreador.caracteristica_id
+  = @padreador.caracteristica.nome
 
 => link_to 'Edit', edit_padreador_path(@padreador)
 '|

@@ -5,7 +5,6 @@ table
     tr
       th Nome
       th Data nascimento
-      th Falecido
       th Raca
       th Caracteristica
       th
@@ -17,9 +16,8 @@ table
       tr
         td = padreador.nome
         td = padreador.data_nascimento
-        td = padreador.falecido
-        td = padreador.raca_id
-        td = padreador.caracteristica_id
+        td = padreador.raca.nome
+        td = padreador.caracteristica.nome
         td = link_to 'Show', padreador
         td = link_to 'Edit', edit_padreador_path(padreador)
         td = link_to 'Destroy', padreador, data: { confirm: 'Are you sure?' }, method: :delete

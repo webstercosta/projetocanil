@@ -1,5 +1,8 @@
 class PadreadoresController < ApplicationController
   before_action :set_padreador, only: [:show, :edit, :update, :destroy]
+  before_action :set_racas, only: [:edit, :update, :new]
+  before_action :set_caracteristicas, only: [:edit, :update, :new]
+
 
   # GET /padreadores
   # GET /padreadores.json
@@ -65,6 +68,12 @@ class PadreadoresController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_padreador
       @padreador = Padreador.find(params[:id])
+    end
+    def set_racas
+      @racas = Raca.all
+    end
+    def set_caracteristicas
+      @caracteristicas = Caracteristica.all
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

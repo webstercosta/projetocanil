@@ -5,6 +5,7 @@ class CreateFilhotes < ActiveRecord::Migration[6.0]
       t.date :data_nascimento
       t.decimal :preco
       t.boolean :disponivel
+      t.string :sexo
       t.bigint :raca_id
       t.bigint :caracteristica_id
       t.bigint :matriz_id

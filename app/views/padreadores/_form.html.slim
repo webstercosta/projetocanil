@@ -17,8 +17,8 @@
     = f.check_box :falecido
   .field
     = f.label :raca_id
-    = f.text_field :raca_id
+    = f.collection_select(:raca_id, @racas, :id, :nome, include_blank: true)
   .field
     = f.label :caracteristica_id
-    = f.text_field :caracteristica_id
+    = f.collection_select(:caracteristica_id, @caracteristicas, :id, :nome, include_blank: true)
   .actions = f.submit

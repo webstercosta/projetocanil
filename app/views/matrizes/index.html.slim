@@ -5,7 +5,6 @@ table
     tr
       th Nome
       th Data nascimento
-      th Falecido
       th Raca
       th Caracteristica
       th
@@ -17,9 +16,8 @@ table
       tr
         td = matriz.nome
         td = matriz.data_nascimento
-        td = matriz.falecido
-        td = matriz.raca_id
-        td = matriz.caracteristica_id
+        td = matriz.raca.nome
+        td = matriz.caracteristica.nome
         td = link_to 'Show', matriz
         td = link_to 'Edit', edit_matriz_path(matriz)
         td = link_to 'Destroy', matriz, data: { confirm: 'Are you sure?' }, method: :delete

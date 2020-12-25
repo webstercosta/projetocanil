@@ -11,10 +11,10 @@ p
   = @matriz.falecido
 p
   strong Raca:
-  = @matriz.raca_id
+  = @matriz.raca.nome
 p
   strong Caracteristica:
-  = @matriz.caracteristica_id
+  = @matriz.caracteristica.nome
 
 => link_to 'Edit', edit_matriz_path(@matriz)
 '|

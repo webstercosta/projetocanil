@@ -1,5 +1,7 @@
 class MatrizesController < ApplicationController
   before_action :set_matriz, only: [:show, :edit, :update, :destroy]
+  before_action :set_racas, only: [:edit, :update, :new]
+  before_action :set_caracteristicas, only: [:edit, :update, :new]
 
   # GET /matrizes
   # GET /matrizes.json
@@ -65,6 +67,12 @@ class MatrizesController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_matriz
       @matriz = Matriz.find(params[:id])
+    end
+    def set_racas
+      @racas = Raca.all
+    end
+    def set_caracteristicas
+      @caracteristicas = Caracteristica.all
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

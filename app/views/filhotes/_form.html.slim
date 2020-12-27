@@ -6,31 +6,43 @@
         - @filhote.errors.full_messages.each do |message|
           li = message
 
-  .field
-    = f.label :nome
-    = f.text_field :nome
-  .field
-    = f.label :data_nascimento
-    = f.date_select :data_nascimento
-  .field
-    = f.label :preco
-    = f.text_field :preco
-  .field
-    = f.label :disponivel
-    = f.check_box :disponivel
-  .field
-    = f.label :raca_id
-    = f.collection_select(:raca_id, @racas, :id, :nome, include_blank: true)
-  .field
-    = f.label :caracteristica_id
-    = f.collection_select(:caracteristica_id, @caracteristicas, :id, :nome, include_blank: true)
-  .field
-    = f.label :matriz_id
-    = f.collection_select(:matriz_id, @matrizes, :id, :nome, include_blank: true)
-  .field
-    = f.label :padreador_id
-    = f.collection_select(:padreador_id, @padreadores, :id, :nome, include_blank: true)
-  .field
-    = f.label :ninhada_id
-    = f.collection_select(:ninhada_id, @ninhadas, :id, :nome, include_blank: true)
-  .actions = f.submit
+  .card.card-default
+    .card-body
+      .form-group
+        .row
+          .col-md-12
+            = f.label :nome
+            = f.text_field :nome, class:"form-control", placeholder:"Nome"
+      .form-group
+        .row
+          .col-md-3
+            = f.label :data_nascimento
+            = f.date_field :data_nascimento, class:"form-control"
+          .col-md-3
+            = f.label :preco
+            = f.text_field :preco, class:"form-control"
+          .col-md-3
+            = f.label :ninhada_id
+            = f.collection_select(:ninhada_id, @ninhadas, :id, :nome, include_blank: true)
+          .col-md-3
+            = f.label :disponivel
+            = f.check_box :disponivel
+      .form-group
+        .row
+          .col-md-3
+            = f.label :raca_id
+            = f.collection_select(:raca_id, @racas, :id, :nome, include_blank: true)
+          .col-md-3
+            = f.label :caracteristica_id
+            = f.collection_select(:caracteristica_id, @caracteristicas, :id, :nome, include_blank: true)
+          .col-md-3
+            = f.label :matriz_id
+            = f.collection_select(:matriz_id, @matrizes, :id, :nome, include_blank: true)
+          .col-md-3
+            = f.label :padreador_id
+            = f.collection_select(:padreador_id, @padreadores, :id, :nome, include_blank: true)
+  .form-group
+    .row
+      .col-md-3
+        .actions
+          = f.button :submit, class: "btn btn-oval btn-success"

@@ -1,35 +1,37 @@
-h1 Listing ninhadas
+.card.card-default
+  .card-header
+    h2 Ninhadas
+  .card-body
+    /! START table-responsive
+    .table-responsive
+      table.table
+        thead
+          tr
+            th Nome
+            th Qtde vivos
+            th Qtde falecidos
+            th Parto
+            th Situação
+            th Observação
+            th Matriz
+            th Padreador
+            th
+            th
 
-table
-  thead
-    tr
-      th Nome
-      th Quantidade vivo
-      th Quantidade falecido
-      th Parto
-      th Situacao
-      th Observacao
-      th Matriz
-      th Padreador
-      th
-      th
-      th
-
-  tbody
-    - @ninhadas.each do |ninhada|
-      tr
-        td = ninhada.nome
-        td = ninhada.quantidade_vivo
-        td = ninhada.quantidade_falecido
-        td = ninhada.parto
-        td = ninhada.situacao
-        td = ninhada.observacao
-        td = ninhada.matriz_id
-        td = ninhada.padreador_id
-        td = link_to 'Show', ninhada
-        td = link_to 'Edit', edit_ninhada_path(ninhada)
-        td = link_to 'Destroy', ninhada, data: { confirm: 'Are you sure?' }, method: :delete
-
-br
-
-= link_to 'New Ninhada', new_ninhada_path
+        tbody
+          - @ninhadas.each do |ninhada|
+            tr
+              td = ninhada.nome
+              td = ninhada.quantidade_vivo
+              td = ninhada.quantidade_falecido
+              td = ninhada.parto
+              td = ninhada.situacao
+              td = ninhada.observacao
+              td = ninhada.matriz.nome
+              td = ninhada.padreador.nome
+              td = link_to edit_ninhada_path(ninhada), class:"btn btn-oval btn-primary" do
+                em.fa-1x.mr-1.far.fa-edit
+              td = link_to ninhada, method: :delete, class:"btn btn-oval btn-danger", data: { confirm: 'Are you sure?' } do
+                em.fa-1x.mr-1.fas.fa-minus-circle
+= link_to new_ninhada_path,  class:"btn btn-oval btn-success" do
+  em.fa-1x.mr-1.fas.fa-plus

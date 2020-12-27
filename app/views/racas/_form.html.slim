@@ -1,12 +1,20 @@
-= form_for @raca do |f|
+= simple_form_for @raca do |f|
   - if @raca.errors.any?
     #error_explanation
       h2 = "#{pluralize(@raca.errors.count, "error")} prohibited this raca from being saved:"
       ul
         - @raca.errors.full_messages.each do |message|
           li = message
+  .card.card-default
+    .card-body
+      .form-group
+        .row
+          .col-md-8
+            = f.label :nome
+            = f.text_field :nome, class:"form-control", placeholder:"Nome da Raça"
 
-  .field
-    = f.label :nome
-    = f.text_field :nome
-  .actions = f.submit
+  .form-group
+    .row
+      .col-md-3
+        .actions
+          = f.button :submit, class: "btn btn-oval btn-success"

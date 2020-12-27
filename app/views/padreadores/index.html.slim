@@ -1,27 +1,29 @@
-h1 Listing padreadores
+.card.card-default
+  .card-header
+    h2 Padreadores
+  .card-body
+    /! START table-responsive
+    .table-responsive
+      table.table
+        thead
+          tr
+            th Nome
+            th Data de Nascimento
+            th Raça
+            th Característica
+            th
+            th
 
-table
-  thead
-    tr
-      th Nome
-      th Data nascimento
-      th Raca
-      th Caracteristica
-      th
-      th
-      th
-
-  tbody
-    - @padreadores.each do |padreador|
-      tr
-        td = padreador.nome
-        td = padreador.data_nascimento
-        td = padreador.raca.nome
-        td = padreador.caracteristica.nome
-        td = link_to 'Show', padreador
-        td = link_to 'Edit', edit_padreador_path(padreador)
-        td = link_to 'Destroy', padreador, data: { confirm: 'Are you sure?' }, method: :delete
-
-br
-
-= link_to 'New Padreador', new_padreador_path
+        tbody
+          - @padreadores.each do |padreador|
+            tr
+              td = padreador.nome
+              td = padreador.data_nascimento
+              td = padreador.raca.nome
+              td = padreador.caracteristica.nome
+              td = link_to edit_padreador_path(padreador), class:"btn btn-oval btn-primary" do
+                em.fa-1x.mr-1.far.fa-edit
+              td = link_to padreador, method: :delete, class:"btn btn-oval btn-danger", data: { confirm: 'Are you sure?' } do
+                em.fa-1x.mr-1.fas.fa-minus-circle
+= link_to new_padreador_path,  class:"btn btn-oval btn-success" do
+  em.fa-1x.mr-1.fas.fa-plus

@@ -1,21 +1,23 @@
-h1 Listing racas
+.card.card-default
+  .card-header
+    h2 Raças
+  .card-body
+    /! START table-responsive
+    .table-responsive
+      table.table
+        thead
+          tr
+            th Nome
+            th
+            th
 
-table
-  thead
-    tr
-      th Nome
-      th
-      th
-      th
-
-  tbody
-    - @racas.each do |raca|
-      tr
-        td = raca.nome
-        td = link_to 'Show', raca
-        td = link_to 'Edit', edit_raca_path(raca)
-        td = link_to 'Destroy', raca, data: { confirm: 'Are you sure?' }, method: :delete
-
-br
-
-= link_to 'New Raca', new_raca_path
+        tbody
+          - @racas.each do |raca|
+            tr
+              td = raca.nome
+              td = link_to edit_raca_path(raca), class:"btn btn-oval btn-primary" do
+                em.fa-1x.mr-1.far.fa-edit
+              td = link_to raca, method: :delete, class:"btn btn-oval btn-danger", data: { confirm: 'Are you sure?' } do
+                  em.fa-1x.mr-1.fas.fa-minus-circle
+= link_to new_raca_path,  class:"btn btn-oval btn-success" do
+  em.fa-1x.mr-1.fas.fa-plus

@@ -2,6 +2,7 @@ class MatrizesController < ApplicationController
   before_action :set_matriz, only: [:show, :edit, :update, :destroy]
   before_action :set_racas, only: [:edit, :update, :new]
   before_action :set_caracteristicas, only: [:edit, :update, :new]
+  before_action :authenticate_usuario!
 
   # GET /matrizes
   # GET /matrizes.json

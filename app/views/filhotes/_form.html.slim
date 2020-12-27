@@ -1,4 +1,4 @@
-= form_for @filhote do |f|
+= simple_form_for @filhote do |f|
   - if @filhote.errors.any?
     #error_explanation
       h2 = "#{pluralize(@filhote.errors.count, "error")} prohibited this filhote from being saved:"
@@ -20,17 +20,17 @@
     = f.check_box :disponivel
   .field
     = f.label :raca_id
-    = f.text_field :raca_id
+    = f.collection_select(:raca_id, @racas, :id, :nome, include_blank: true)
   .field
     = f.label :caracteristica_id
-    = f.text_field :caracteristica_id
+    = f.collection_select(:caracteristica_id, @caracteristicas, :id, :nome, include_blank: true)
   .field
     = f.label :matriz_id
-    = f.text_field :matriz_id
+    = f.collection_select(:matriz_id, @matrizes, :id, :nome, include_blank: true)
   .field
     = f.label :padreador_id
-    = f.text_field :padreador_id
+    = f.collection_select(:padreador_id, @padreadores, :id, :nome, include_blank: true)
   .field
     = f.label :ninhada_id
-    = f.text_field :ninhada_id
+    = f.collection_select(:ninhada_id, @ninhadas, :id, :nome, include_blank: true)
   .actions = f.submit

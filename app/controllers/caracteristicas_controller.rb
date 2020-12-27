@@ -1,5 +1,6 @@
 class CaracteristicasController < ApplicationController
   before_action :set_caracteristica, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_usuario!
 
   # GET /caracteristicas
   # GET /caracteristicas.json

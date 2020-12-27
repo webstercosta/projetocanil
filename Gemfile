@@ -36,6 +36,12 @@ gem 'jbuilder', '~> 2.7'
 gem 'bootsnap', '>= 1.4.2', require: false
 gem 'slim-rails', '~> 3.1', '>= 3.1.1'
 gem 'devise', '4.7.2'
+gem 'ransack', '2.3.2'
+gem 'ransack-enum', '~> 0.2'
+gem 'enum_help', '0.0.17'
+gem 'attribute-defaults', '0.9.0'
+gem 'simple_form', '5.0.2'
+gem 'nested_form', '0.3.2'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

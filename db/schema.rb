@@ -54,7 +54,7 @@ ActiveRecord::Schema.define(version: 2020_12_24_134220) do
     t.integer "situacao"
     t.date "data_cruzamento"
     t.date "previsao_nascimento"
-    t.string "observacao"
+    t.text "observacao"
     t.bigint "matriz_id"
     t.bigint "padreador_id"
     t.datetime "created_at", precision: 6, null: false

@@ -8,7 +8,7 @@ class CreateNinhadas < ActiveRecord::Migration[6.0]
       t.integer :situacao
       t.date :data_cruzamento
       t.date :previsao_nascimento
-      t.string :observacao
+      t.text :observacao
       t.bigint :matriz_id
       t.bigint :padreador_id
 

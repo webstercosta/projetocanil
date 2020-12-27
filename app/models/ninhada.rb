@@ -3,5 +3,5 @@ class Ninhada < ApplicationRecord
   belongs_to :padreador
   has_many :filhotes
   enum parto: { normal: 1, cesaria: 2}
-  enum situacao: { gestante: 1, nascido: 2}
+  enum situacao: { gestante: 1, nascido: 2, perdido: 3}
 end

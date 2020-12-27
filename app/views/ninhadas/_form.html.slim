@@ -1,4 +1,4 @@
-= form_for @ninhada do |f|
+= simple_form_for @ninhada do |f|
   - if @ninhada.errors.any?
     #error_explanation
       h2 = "#{pluralize(@ninhada.errors.count, "error")} prohibited this ninhada from being saved:"
@@ -15,19 +15,25 @@
   .field
     = f.label :quantidade_falecido
     = f.number_field :quantidade_falecido
+  .form-inputs
+    .row
+      = f.input :parto, collection: Ninhada.partos, prompt: false
+    .row
+      = f.input :situacao, collection: Ninhada.situacoes, prompt: false
   .field
-    = f.label :parto
-    = f.number_field :parto
+    = f.label :data_cruzamento
+    = f.date_select :data_cruzamento
   .field
-    = f.label :situacao
-    = f.number_field :situacao
-  .field
-    = f.label :observacao
-    = f.text_field :observacao
+    = f.label :previsao_nascimento
+    = f.date_select :previsao_nascimento
+  .form-inputs
+    .row
+      .col-md-12
+        = f.input :observacao, as: :text, input_html: { rows: 5 }
   .field
     = f.label :matriz_id
-    = f.text_field :matriz_id
+    = f.collection_select(:matriz_id, @matrizes, :id, :nome, include_blank: true)
   .field
     = f.label :padreador_id
-    = f.text_field :padreador_id
+    = f.collection_select(:padreador_id, @padreadores, :id, :nome, include_blank: true)
   .actions = f.submit

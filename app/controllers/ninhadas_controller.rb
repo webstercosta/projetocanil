@@ -1,5 +1,8 @@
 class NinhadasController < ApplicationController
   before_action :set_ninhada, only: [:show, :edit, :update, :destroy]
+  before_action :set_matrizes, only: [:edit, :update, :new]
+  before_action :set_padreadores, only: [:edit, :update, :new]
+  before_action :authenticate_usuario!
 
   # GET /ninhadas
   # GET /ninhadas.json
@@ -65,6 +68,12 @@ class NinhadasController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_ninhada
       @ninhada = Ninhada.find(params[:id])
+    end
+    def set_matrizes
+      @matrizes = Matriz.all
+    end
+    def set_padreadores
+      @padreadores = Padreador.all
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

@@ -1,5 +1,11 @@
 class FilhotesController < ApplicationController
   before_action :set_filhote, only: [:show, :edit, :update, :destroy]
+  before_action :set_matrizes, only: [:edit, :update, :new]
+  before_action :set_padreadores, only: [:edit, :update, :new]
+  before_action :set_racas, only: [:edit, :update, :new]
+  before_action :set_caracteristicas, only: [:edit, :update, :new]
+  before_action :set_ninhadas, only: [:edit, :update, :new]
+  before_action :authenticate_usuario!
 
   # GET /filhotes
   # GET /filhotes.json
@@ -66,7 +72,21 @@ class FilhotesController < ApplicationController
     def set_filhote
       @filhote = Filhote.find(params[:id])
     end
-
+    def set_matrizes
+      @matrizes = Matriz.all
+    end
+    def set_padreadores
+      @padreadores = Padreador.all
+    end
+    def set_racas
+      @racas = Raca.all
+    end
+    def set_caracteristicas
+      @caracteristicas = Caracteristica.all
+    end
+    def set_ninhadas
+      @ninhadas = Ninhada.all
+    end
     # Never trust parameters from the scary internet, only allow the white list through.
     def filhote_params
       params.require(:filhote).permit(:nome, :data_nascimento, :preco, :disponivel, :raca_id, :caracteristica_id, :matriz_id, :padreador_id, :ninhada_id)

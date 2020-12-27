@@ -1,37 +1,39 @@
-h1 Listing filhotes
+.card.card-default
+  .card-header
+    h2 Filhotes
+  .card-body
+    /! START table-responsive
+    .table-responsive
+      table.table
+        thead
+          tr
+            th Nome
+            th Data de Nascimento
+            th Preço
+            th Disponível
+            th Raça
+            th Característica
+            th Matriz
+            th Padreador
+            th Ninhada
+            th
+            th
 
-table
-  thead
-    tr
-      th Nome
-      th Data nascimento
-      th Preco
-      th Disponivel
-      th Raca
-      th Caracteristica
-      th Matriz
-      th Padreador
-      th Ninhada
-      th
-      th
-      th
-
-  tbody
-    - @filhotes.each do |filhote|
-      tr
-        td = filhote.nome
-        td = filhote.data_nascimento
-        td = filhote.preco
-        td = filhote.disponivel
-        td = filhote.raca_id
-        td = filhote.caracteristica_id
-        td = filhote.matriz_id
-        td = filhote.padreador_id
-        td = filhote.ninhada_id
-        td = link_to 'Show', filhote
-        td = link_to 'Edit', edit_filhote_path(filhote)
-        td = link_to 'Destroy', filhote, data: { confirm: 'Are you sure?' }, method: :delete
-
-br
-
-= link_to 'New Filhote', new_filhote_path
+        tbody
+          - @filhotes.each do |filhote|
+            tr
+              td = filhote.nome
+              td = filhote.data_nascimento
+              td = filhote.preco
+              td = filhote.disponivel
+              td = filhote.raca.nome
+              td = filhote.caracteristica.nome
+              td = filhote.matriz.nome
+              td = filhote.padreador.nome
+              td = filhote.ninhada.nome
+              td = link_to edit_filhote_path(filhote), class:"btn btn-oval btn-primary" do
+                em.fa-1x.mr-1.far.fa-edit
+              td = link_to filhote, method: :delete, class:"btn btn-oval btn-danger", data: { confirm: 'Are you sure?' } do
+                em.fa-1x.mr-1.fas.fa-minus-circle
+= link_to new_filhote_path,  class:"btn btn-oval btn-success" do
+  em.fa-1x.mr-1.fas.fa-plus

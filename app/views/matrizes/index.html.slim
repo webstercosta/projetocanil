@@ -1,27 +1,29 @@
-h1 Listing matrizes
+.card.card-default
+  .card-header
+    h2 Matrizes
+  .card-body
+    /! START table-responsive
+    .table-responsive
+      table.table
+        thead
+          tr
+            th Nome
+            th Data de Nascimento
+            th Raça
+            th Característica
+            th
+            th
 
-table
-  thead
-    tr
-      th Nome
-      th Data nascimento
-      th Raca
-      th Caracteristica
-      th
-      th
-      th
-
-  tbody
-    - @matrizes.each do |matriz|
-      tr
-        td = matriz.nome
-        td = matriz.data_nascimento
-        td = matriz.raca.nome
-        td = matriz.caracteristica.nome
-        td = link_to 'Show', matriz
-        td = link_to 'Edit', edit_matriz_path(matriz)
-        td = link_to 'Destroy', matriz, data: { confirm: 'Are you sure?' }, method: :delete
-
-br
-
-= link_to 'New Matriz', new_matriz_path
+        tbody
+          - @matrizes.each do |matriz|
+            tr
+              td = matriz.nome
+              td = matriz.data_nascimento
+              td = matriz.raca.nome
+              td = matriz.caracteristica.nome
+              td = link_to edit_matriz_path(matriz), class:"btn btn-oval btn-primary" do
+                em.fa-1x.mr-1.far.fa-edit
+              td = link_to matriz, method: :delete, class:"btn btn-oval btn-danger", data: { confirm: 'Are you sure?' } do
+                em.fa-1x.mr-1.fas.fa-minus-circle
+= link_to new_matriz_path,  class:"btn btn-oval btn-success" do
+  em.fa-1x.mr-1.fas.fa-plus

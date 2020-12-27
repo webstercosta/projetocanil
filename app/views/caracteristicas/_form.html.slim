@@ -1,4 +1,4 @@
-= form_for @caracteristica do |f|
+= simple_form_for @caracteristica do |f|
   - if @caracteristica.errors.any?
     #error_explanation
       h2 = "#{pluralize(@caracteristica.errors.count, "error")} prohibited this caracteristica from being saved:"
@@ -6,7 +6,16 @@
         - @caracteristica.errors.full_messages.each do |message|
           li = message
 
-  .field
-    = f.label :nome
-    = f.text_field :nome
-  .actions = f.submit
+  .card.card-default
+    .card-body
+      .form-group
+        .row
+          .col-md-8
+            = f.label :nome
+            = f.text_field :nome, class:"form-control", placeholder:"Nome da característica"
+
+  .form-group
+    .row
+      .col-md-3
+        .actions
+          = f.button :submit, class: "btn btn-oval btn-success"

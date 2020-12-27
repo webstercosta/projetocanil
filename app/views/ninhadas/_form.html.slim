@@ -6,34 +6,47 @@
         - @ninhada.errors.full_messages.each do |message|
           li = message
 
-  .field
-    = f.label :nome
-    = f.text_field :nome
-  .field
-    = f.label :quantidade_vivo
-    = f.number_field :quantidade_vivo
-  .field
-    = f.label :quantidade_falecido
-    = f.number_field :quantidade_falecido
-  .form-inputs
+  .card.card-default
+    .card-body
+      .form-group
+        .row
+          .col-md-12
+            = f.label :nome
+            = f.text_field :nome, class:"form-control", placeholder:"Nome"
+      .form-group
+        .row
+          .col-md-3
+            = f.label :quantidade_vivo
+            = f.number_field :quantidade_vivo, class:"form-control"
+          .col-md-3
+            = f.label :quantidade_falecido
+            = f.number_field :quantidade_falecido, class:"form-control"
+          .col-md-3
+            = f.input :parto, collection: Ninhada.partos, prompt: false
+          .col-md-3
+            = f.input :situacao, collection: Ninhada.situacoes, prompt: false
+      .form-group
+        .row
+          .col-md-3
+            = f.label :matriz_id
+            = f.collection_select(:matriz_id, @matrizes, :id, :nome, include_blank: true)
+          .col-md-3
+            = f.label :padreador_id
+            = f.collection_select(:padreador_id, @padreadores, :id, :nome, include_blank: true)
+          .col-md-3
+            = f.label :data_cruzamento
+            = f.date_field :data_cruzamento, class:"form-control"
+          .col-md-3
+            = f.label :previsao_nascimento
+            = f.date_field :previsao_nascimento, class:"form-control"
+      .form-group
+        .row
+          .col-md-12
+            = f.label :observacao
+            = f.text_area(:observacao, cols: 100, rows: 5, class:"form-control")
+
+  .form-group
     .row
-      = f.input :parto, collection: Ninhada.partos, prompt: false
-    .row
-      = f.input :situacao, collection: Ninhada.situacoes, prompt: false
-  .field
-    = f.label :data_cruzamento
-    = f.date_select :data_cruzamento
-  .field
-    = f.label :previsao_nascimento
-    = f.date_select :previsao_nascimento
-  .form-inputs
-    .row
-      .col-md-12
-        = f.input :observacao, as: :text, input_html: { rows: 5 }
-  .field
-    = f.label :matriz_id
-    = f.collection_select(:matriz_id, @matrizes, :id, :nome, include_blank: true)
-  .field
-    = f.label :padreador_id
-    = f.collection_select(:padreador_id, @padreadores, :id, :nome, include_blank: true)
-  .actions = f.submit
+      .col-md-3
+        .actions
+          = f.button :submit, class: "btn btn-oval btn-success"

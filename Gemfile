@@ -8,7 +8,7 @@ gem 'rails', '~> 6.0.0'
 
 # HEROKU doesn't support sqlite3.
 # Comment this gem
-gem 'sqlite3', '~> 1.4'
+# gem 'sqlite3', '~> 1.4'
 gem 'pg', '>= 0.18', '< 2.0'
 # and uncomment the following
 # gem 'pg'

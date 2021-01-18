@@ -26,8 +26,12 @@
             = f.collection_select(:caracteristica_id, @caracteristicas, :id, :nome, include_blank: true)
       .form-group
         .row
-          .col-md-8
+          .col-md-4
             = f.input :falecido
+        .row
+          .col-md-8
+            = f.label :avatar
+            = f.file_field :avatar, class:"field"
 
   .form-group
     .row

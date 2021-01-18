@@ -78,6 +78,6 @@ class MatrizesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def matriz_params
-      params.require(:matriz).permit(:nome, :data_nascimento, :falecido, :raca_id, :caracteristica_id)
+      params.require(:matriz).permit(:nome, :data_nascimento, :falecido, :raca_id, :caracteristica_id, :avatar)
     end
 end

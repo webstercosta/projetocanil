@@ -14,19 +14,22 @@ p
   = @filhote.disponivel
 p
   strong Raca:
-  = @filhote.raca_id
+  = @filhote.raca.nome
 p
   strong Caracteristica:
-  = @filhote.caracteristica_id
+  = @filhote.caracteristica.nome
 p
   strong Matriz:
-  = @filhote.matriz_id
+  = @filhote.matriz.nome
 p
   strong Padreador:
-  = @filhote.padreador_id
+  = @filhote.padreador.nome
 p
   strong Ninhada:
-  = @filhote.ninhada_id
+  = @filhote.ninhada.nome
+p
+  strong Avatar:
+  = image_tag @filhote.avatar
 
 => link_to 'Edit', edit_filhote_path(@filhote)
 '|

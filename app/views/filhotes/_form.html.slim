@@ -41,6 +41,10 @@
           .col-md-3
             = f.label :padreador_id
             = f.collection_select(:padreador_id, @padreadores, :id, :nome, include_blank: true)
+        .row
+          .col-md-12
+            = f.label :avatar
+            = f.file_field :avatar, class:"field"
   .form-group
     .row
       .col-md-3

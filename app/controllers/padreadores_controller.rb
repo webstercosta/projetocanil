@@ -79,6 +79,6 @@ class PadreadoresController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def padreador_params
-      params.require(:padreador).permit(:nome, :data_nascimento, :falecido, :raca_id, :caracteristica_id)
+      params.require(:padreador).permit(:nome, :data_nascimento, :falecido, :raca_id, :caracteristica_id, :avatar)
     end
 end

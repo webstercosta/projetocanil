@@ -23,6 +23,8 @@
               td = padreador.caracteristica.nome
               td = link_to edit_padreador_path(padreador), class:"btn btn-oval btn-primary" do
                 em.fa-1x.mr-1.far.fa-edit
+              td = link_to padreador_path(padreador), class:"btn btn-oval btn-warning" do
+                em.fa-1x.mr-1.far.fa-book
               td = link_to padreador, method: :delete, class:"btn btn-oval btn-danger", data: { confirm: 'Are you sure?' } do
                 em.fa-1x.mr-1.fas.fa-minus-circle
 = link_to new_padreador_path,  class:"btn btn-oval btn-success" do

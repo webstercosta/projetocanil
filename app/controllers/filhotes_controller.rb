@@ -89,6 +89,6 @@ class FilhotesController < ApplicationController
     end
     # Never trust parameters from the scary internet, only allow the white list through.
     def filhote_params
-      params.require(:filhote).permit(:nome, :data_nascimento, :preco, :disponivel, :raca_id, :caracteristica_id, :matriz_id, :padreador_id, :ninhada_id)
+      params.require(:filhote).permit(:nome, :data_nascimento, :preco, :disponivel, :raca_id, :caracteristica_id, :matriz_id, :padreador_id, :ninhada_id, :avatar)
     end
 end

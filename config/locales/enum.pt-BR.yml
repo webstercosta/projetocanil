@@ -1,0 +1,333 @@
+pt-BR:
+  enums:
+    cadastro:
+      veiculo:
+        combustivel:
+          alcool: Álcool
+          bio_combustivel: Bio-Combustível
+          diesel: Diesel
+          eletrico: Elétrico
+          flex: Flex
+          gas: Gás GNV
+          gasolina: Gasolina
+          hibrido_flex: Híbrido Flex
+        uso:
+          aluguel: Aluguel
+          misto: Misto
+          transporte_de_cargas: Transporte de Cargas
+          transporte_de_passageiros: Transporte de Passageiros
+        sistema_de_transporte:
+          buggy: Buggy
+          escolar: Escolar
+          moto_taxi: Moto Táxi
+          quadriciclo: Quadriciclo
+          taxi: Táxi
+          transporte_distrital: Transporte Distrital
+          transporte_urbano: Transporte Urbano
+          transporte_4x4: Transporte 4x4
+        relacao_contratual:
+          aplicativo: Aplicativo
+          cooperativa: Cooperativa
+          empresa: Empresa
+          proprio: Próprio
+        situacao:
+          ativo: Ativo
+          inativo: Inativo
+      imovel:
+        situacao:
+          ativo: Ativo
+          inativo: Inativo
+          incorporado: Incorporado
+          temporario: Temporário
+          rural: Rural
+          bloqueado: Bloqueado
+        natureza:
+          terreno: Terreno
+          edificacao: Edificação
+        correspondencia:
+          imovel: Imóvel
+          contribuinte: Contribuinte
+          co_proprietario: Co-Proprietário
+      Logradouro:
+        utilizar:
+          nome_oficial: Nome Oficial
+          nome_anterior: Nome Anterior
+          nome_popular: Nome Popular
+      contribuinte:
+        tipo:
+          pessoa_fisica: Pessoa Física
+          pessoa_juridica: Pessoa Jurídica
+          caepf: CAEPF
+          estrangeiro: Estrangeiro
+        tipo_de_cnpj:
+          matriz: MATRIZ
+          filial: FILIAL
+        restricao:
+          nao_emitir_certidao: Não emitir Certidão
+          nao_permitir_transferencia_imobiliaria: Não permitir transferência imobiliária
+          restricao_total: Restrição Total
+      estabelecimento:
+        categoria:
+          prestacao_de_servicos: Prestação de Serviços
+          comercio: Comércio
+          industria: Indústria
+          agronegocio: Agronegócio
+          outros: Outros
+        situacao:
+          ativo: Ativo
+          inativo: Inativo
+          baixado: Baixado
+          suspenso: Suspenso
+          pendente_do_simples: Pendente do Simples
+          pendente_da_redesim: Pendente RedeSim
+        origem:
+          do_municipio: Do Município
+          de_outro_municipio: De outro Município
+        forma_de_cadastro:
+          homologado: Homologado
+          de_oficio: De Ofício
+          rede_sim: RedeSim
+          pre_cadastro: Pré-Cadastro
+        tipo_de_cadastro:
+          empresa: Empresa
+          profissional_autonomo: Profissional Autônomo
+          sociedade_profissional: Sociedade Profissional
+          permissionario: Permissionário
+          caepf: CAEPF
+          instituicao: Instituição
+        grau_de_risco:
+          baixo_risco: Baixo Risco
+          medio_risco: Médio Risco
+          alto_risco: Alto Risco
+        nivel_de_instrucao:
+          fundamental: Fundamental
+          medio: Médio
+          superior: Superior
+          outros_niveis: Outros
+        natureza_da_organizacao:
+          privada: Privada
+          publica: Pública
+          mista: Mista
+        porte:
+          sem: Sem
+          grande: Grande
+          media: Média
+          pequena: Pequena
+          micro: Micro
+          mei: MEI
+          eireli: EIRELI
+          associacao: Associação
+          pessoa_fisica: Pessoa Física
+          me: ME
+          epp: EPP
+          demais: Demais
+        regime:
+          normal: Normal
+          estimativa: Estimativa
+        tipo_de_declaracao:
+          escrituracao_de_notas: Escrituração de Notas
+          bancos: Bancos
+          cartorios: Cartórios
+          construcao_civil: Construção Civil
+          educacao: Educação
+          especial: Especial
+          plano_saude: Plano Saúde
+        nota_fiscal:
+          nao_autorizado: Não Autorizado
+          autorizado_nfe: Autorizado NFE
+          autorizado_dms: Autorizado DMS
+          autorizado_nota_avulsa: Autorizado Nota Avulsa
+      grupo:
+        tipo:
+          terreno: Terreno
+          edificacao: Edificação
+          outros: Outros
+      atributo:
+        tipo:
+          situacao: Situação
+          topografia: Topografia
+          pedologia: Pedologia
+          classificacao_arquitetonica: Classificação Arquitetônica
+          ocupacao: Ocupação (Terreno/Edificação)
+          utilizacao: Utilização
+          patrimonio: Patrimônio
+          posicao_fiscal: Posição Fiscal
+          instalacao_eletrica: Instalação Elétrica
+          instalacao_sanitaria: Instalação Sanitária
+          estrutura: Estrutura
+          conservacao: Conservação
+          padrao: Padrão
+          delimitacao: Delimitação
+          calcada: Calçada
+          equipamento: Equipamento
+          saneamento: Saneamento
+      cnae:
+        grau_de_risco:
+          baixo_risco: Baixo Risco
+          medio_risco: Médio Risco
+          alto_risco: Alto Risco
+        anexo:
+          anexo_i: Anexo I
+          anexo_ii: Anexo II
+          anexo_iii: Anexo III
+          anexo_iv: Anexo IV
+          anexo_v: Anexo V
+      codigo_de_tributacao:
+        tipo_de_atividade:
+          servico: Serviços
+          agronegocio: Agricultura
+          comercio: Comércio
+          industria: Indústria
+      co_proprietario:
+        tipo:
+          vendedor: Vendedor
+          conjuge: Cônjuge
+          outros: Outros
+      contador:
+        tipo_de_documento:
+          pessoa_fisica: Pessoa Física
+          pessoa_juridica: Pessoa Jurídica
+        tipo:
+          escritorio: Escritório
+          profissional: Profissional
+          contador: Contador
+        tipo_de_autorizacao:
+          escrituracao_e_nfe: Escrituração e NFe
+          somente_escrituracao: Somente Escrituração
+          somente_emissao_de_nfe: Somente Emissão de NFe
+    contabil:
+      linha_do_retorno:
+        forma_de_captura:
+          guiche: Guichê
+          terminal: Terminal
+          internet: Internet
+          outros: Outros
+          correspondente: Correspondente
+          telefone: Telefone
+          casa_loterica: Casa Lotérica
+          multibanco: Multibanco
+          pix: PIX
+          guiche_sem_fatura: Guichê sem Fatura
+          terminal_sem_fatura: Terminal sem Fatura
+          internet_sem_fatura: Internet  sem Fatura
+          correspondente_sem_fatura: Correspondente sem Fatura
+          telefone_sem_fatura: Telefone sem Fatura
+          outros_sem_fatura: Outros sem Fatura
+          loterica_sem_fatura: Casa Lotérica sem Fatura
+          multibanco_sem_fatura: Multibanco sem Fatura
+          pix_sem_fatura: PIX sem Fatura
+        forma_de_pagamento:
+          dinheiro: Dinheiro
+          cheque: Cheque
+          nao_identificado: Não Identificado
+          cartao_de_credito: Cartão de Crédito
+          cartao_multibanco: Cartão Multibanco
+          debito_em_conta: Débito em Conta
+    divida_ativa:
+      livro:
+        tipo:
+          imobiliario: Imobiliário
+          mobiliario: Mobiliário
+          nao_tributario: Nâo Tributário
+        situacao:
+          aberto: Aberto
+          finalizado: Finalizado
+          cancelado: Cancelado
+    configuracao:
+      servico:
+        atividade:
+          outros: Outros
+          bancos: Bancos
+          cartorios: Cartórios
+          construcao_civil: Construção Civil
+          educacao: Educação
+          especial: Especial
+          saude: Saúde
+          condominio: Condomínio
+          consultoria: Consultoria
+          informatica: Informática
+          provedor_de_internet: Provedor de Internet
+          transporte: Transporte
+          hotelaria: Hotelaria
+          pedagio: Pedágio
+          publicidade: Publicidade
+          medicina: Medicina
+          engenharia: Engenharia
+          agenciamento: Agenciamento
+          diversoes: Diversões
+          seguros: Seguro
+        local_da_tributacao:
+          no_municipio: No Município
+          no_local_da_prestacao: No Local da Prestação
+      receita:
+        tipo:
+          imposto: Imposto
+          taxa: Taxa
+          divida: Dívida
+          contribuicao: Contribuição
+          melhoria: Melhoria
+          outros: Outros
+        natureza:
+          tributaria: Tributária
+          nao_tributaria: Não Tributária
+        tipo_de_codigo_de_barras:
+          febraban: FEBRABAN
+          boleto_com_registro: BOLETO COM REGISTRO
+        tipo_de_febraban:
+          prefeitura: "1 - Prefeitura"
+          saneamento: "2 - Saneamento"
+          eletrica_e_gas: "3 - Elétrica e Gás"
+          telecomunicacao: "4 - Telecomunicação"
+          orgao_governamental: "5 - Órgão Governamental"
+          radical_cnpj: "6 - Radical CNPJ"
+          transito: "7- Trânsito"
+      iptu:
+        formula_de_calculo:
+          media: Média dos Fatores
+          multiplicao: Multiplicação dos Fatores
+          faixa: Faixa de Fatores
+        parametro_m2_terreno:
+          segmento: Segmento
+          quadra: Quadra
+          loteamento: Loteamento
+          bairro: Bairro
+          setor: Setor
+        parametro_m2_edificado:
+          atributo: Atributo
+          atributo_padrao: Atributo/Padrão
+          atributo_bairro: Atributo/Bairro
+          atributo_loteamento: Atributo/Loteamento
+        correcao_de_valor:
+          valor_venal: Valor Venal do Imóvel
+          area_terreno: Área do Terreno
+    protocolo:
+      finalidade:
+        tipo:
+          processo: Processo
+          solicitacao_de_servico: Solicitação de Serviços
+          denuncia: Denúncia
+          isencao_de_iptu: Isenção de IPTU
+          outros: Outros
+      autonomo:
+        nivel:
+          fundamental: Fundamental
+          medio: Médio
+          superior: Superior
+    simples_nacional:
+      arquivo:
+        tipo:
+          daf607: DAF607
+          per: PER
+          permei: PERMEI
+          eve: EVE
+          evemei: EVEMEI
+          indeferimento: INDEFERIMENTO
+          stn: STN
+      periodo:
+        tipo:
+          per: PER
+          permei: PERMEI
+      evento:
+        tipo:
+          eve: EVE
+          evemei: EVEMEI

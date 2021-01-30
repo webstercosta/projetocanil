@@ -18,7 +18,7 @@
           - @padreadores.each do |padreador|
             tr
               td = padreador.nome
-              td = padreador.data_nascimento
+              td = l(padreador.data_nascimento)
               td = padreador.raca.nome
               td = padreador.caracteristica.nome
               td = link_to edit_padreador_path(padreador), class:"btn btn-oval btn-primary" do

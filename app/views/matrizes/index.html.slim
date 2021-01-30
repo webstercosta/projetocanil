@@ -18,7 +18,7 @@
           - @matrizes.each do |matriz|
             tr
               td = matriz.nome
-              td = matriz.data_nascimento
+              td = l(matriz.data_nascimento)
               td = matriz.raca.nome
               td = matriz.caracteristica.nome
               td = link_to edit_matriz_path(matriz), class:"btn btn-oval btn-primary" do
